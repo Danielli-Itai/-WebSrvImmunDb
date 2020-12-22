@@ -14,8 +14,10 @@ export PROJ_DIR=$HOME_DIR/WebSrvCoderApprentice
 
 
 
-source	EnvSetup.sh
-
-
+echo  "*********************************"
+echo  "		   Web Server Immune Db     "
+echo  "*********************************"
+#Call the server environment setup.
+source $PROJ_DIR/Linux/EnvSetup.sh
 
 
