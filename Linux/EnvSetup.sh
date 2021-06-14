@@ -1,7 +1,7 @@
 #!/bin/bash
 #Keep linux End of line conversion.
 echo '*********************************'
-echo '   Coder Apprentice Environment  '
+echo '   Immune Development Environment  '
 echo '*********************************'
 
 
