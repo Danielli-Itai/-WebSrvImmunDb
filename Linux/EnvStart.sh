@@ -19,3 +19,4 @@ echo  "		   Web Server Immune Db     "
 echo  "*********************************"
 #Call the server environment setup.
 source $PROJ_DIR/Linux/EnvSetup.sh
+source $PROJ_DIR/Linux/EnvImmuneDb.sh
