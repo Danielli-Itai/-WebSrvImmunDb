@@ -8,13 +8,25 @@ echo '*********************************'
 
 
 
-echo "Immune Repositories: IDevClone, IDevPull, IDevClear"
-#Clone Immune Development map repositories.
+
+echo "IDevClone - Clone Immune Development map repositories."
 function IDevClone()
 {
 	GitClone PyBase
 	GitClone PyBaseNlp
 	GitClone PySubstitutionMap
+}
+
+echo "IDevReset - Reset Immune Development map repositories."
+function IDevReset()
+{
+	GitReset PyBase
+	GitReset PyBaseNlp
+	GitReset PySubstitutionMap
+	
+	echo "Resetting current folder"
+	sudo git reset --hard
+	sudo git pull
 }
 
 
@@ -24,23 +36,30 @@ function IDevPull()
 	GitPull	PyBase
 	GitPull	PyBaseNlp
 	GitPull	PySubstitutionMap
+	
+	echo "Pulling current folder"
+	sudo git  pull
 }
 
 
 #Clear Immune Development directories.
 function IDevClear()
 {
-	sudo rm -rf	PyBase
-	sudo rm -rf	PyBaseNlp
-	sudo rm -rf	PySubstitutionMap
+	sudo rm -rf	./PyBase
+	sudo rm -rf	./PyBaseNlp
+	sudo rm -rf	./PySubstitutionMap
 }
 
 
 
 
 
-echo "Immune Development: IDevInstall, IDevConnectSysAli"
+echo "IDevConnectHive, IDevConnectSysAli - SSH connection to servers"
 #Connect to System Ali.
+function IDevConnectHive()
+{
+	ssh –p 22 idanielli@hive01.haifa.ac.il
+}
 function IDevConnectSysAli()
 {
 	ssh itaid@systemAli.haifa.ac.il
